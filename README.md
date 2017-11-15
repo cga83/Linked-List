@@ -1,10 +1,1 @@
-# Linked-List
-# Linked-List
-# Linked-List
-# Crosswords-Game
-# Crosswords-Game
-# Crosswords-Game
-# Crosswords-Game
-# Crosswords-Game
-# Crosswords-Game
-# Crosswords-Game
+This is a Linked List class I developed.
