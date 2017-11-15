@@ -19,7 +19,7 @@ class LinkedList
 	public:
 		LinkedList() { head = NULL; tail = NULL; }
 		LinkedList(int v) { head = NULL; tail = NULL; addNodeEnd(v); }
-		void addNodeEnd (int v)
+		void addNodeEnd (int v) // we add the node with value "v" at the end
 		{
 			// If the list is empty then we add the head
 			if (head==NULL) { head = new Node(v); return; }
@@ -33,7 +33,7 @@ class LinkedList
 			current->next = new Node(v);
 		}
 
-		void addNodeBeginning (int v)
+		void addNodeBeginning (int v) // we add the node with value "v" at the beginning
 		{
 			Node* newNode = new Node(v);
 			newNode->next = head;
@@ -41,7 +41,7 @@ class LinkedList
 
 		}
 
-		void deleteNode(int v)
+		void deleteNode(int v) // we delete the first occurence of the value "v" in the list
 		{
 			// Is it the head that we want to delete ?
 			if (head->value == v)
@@ -62,7 +62,7 @@ class LinkedList
 			
 		}
 
-		void printAll() const
+		void printAll() const // this function print the list
 		{
 			if (head == NULL) { cout << "Nothing to print yet!"; return; }
 			Node* current = head;
@@ -72,6 +72,16 @@ class LinkedList
 				current = current->next;
 				cout << " < " ;
 				cout << current->value;
+			}
+		}
+	
+		void mergeList(const LinkedList& l) // this function merge two lists
+		{
+			Node * current = l.head;
+			while (current!=NULL) // we add every element of the list to the second one
+			{
+				addNodeEnd(current->value);
+				current = current->next;
 			}
 		}
 };
