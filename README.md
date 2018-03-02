@@ -1,3 +1,10 @@
+# Linkes List
+
+## The program
+This is a program I developed in order to understand better Linked List. There is a List Data Structure in C++ and you can use it with its function (insert...) but it's always good to know how something works.
+
+
+## The code
 This code is written in C++.
 Two classes were created in order to create a Linked List : a Node Class and a Linked List Class.
 
